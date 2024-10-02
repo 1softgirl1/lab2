@@ -4,13 +4,13 @@ import geometry2d.*;
 
 
 public class Cylinder {
-    private Circle c;
+    private Figure f;
     private double h;
 
-    public Cylinder(Circle c, double h) {
+    public Cylinder(Figure f, double h) {
         try{
-            if(h<0) throw new CylinderException("Недопустимое значение, высота меньше 0");
-            this.c = c;
+            if(h<0) throw new Exception("Недопустимое значение, высота меньше 0");
+            this.f = f;
             this.h = h;
         }catch (Exception ex){
             System.out.println(ex.getMessage());
@@ -19,6 +19,6 @@ public class Cylinder {
     }
 
     public double volume(){
-        return Math.round(h*c.area());
+        return Math.round(h*f.area());
     }
 }

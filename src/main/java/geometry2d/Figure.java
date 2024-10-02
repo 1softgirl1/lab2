@@ -1,5 +1,5 @@
 package geometry2d;
 
-interface Figure{
+public interface Figure{
     int area();
 }

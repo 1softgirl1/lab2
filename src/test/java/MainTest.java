@@ -74,8 +74,12 @@ class MainTest {
     }
     @Test
     void Cylinder(){
-        Circle c1=new Circle(5);
-        Cylinder c2=new Cylinder(c1,44);
-        assertEquals(3476,c2.volume());
+        Circle c=new Circle(5);
+        Cylinder c1=new Cylinder(c,44);
+        assertEquals(3476,c1.volume());
+
+        Rectangle r=new Rectangle(4,6);
+        Cylinder c2=new Cylinder(r,44);
+        assertEquals(1056,c2.volume());
     }
 }
